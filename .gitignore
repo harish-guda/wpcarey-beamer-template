@@ -1,10 +1,9 @@
-.aux
-.bbl
-.idx
-.ilg
-.ind
-.nav
-.out
-.snm
-.synctex
-.toc
+# Ignore all latex log files
+*.log
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex
+*.synctex.gz
+# Ignore 
