@@ -1,0 +1,190 @@
+\documentclass[9pt, mathserif]{beamer}
+\usepackage{eulervm}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{comment}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{comment}
+\usepackage{verbatim}
+\usepackage{multicol}
+\beamertemplatenavigationsymbolsempty
+\definecolor{asumaroon}{RGB}{128, 0, 0}
+\definecolor{asugold}{RGB}{164,114,11}
+\definecolor{olive}{RGB}{85,107,47}
+\usecolortheme[named=asumaroon]{structure}
+\def\callout#1{\textcolor{asugold}{#1}}
+\def\bigquestion#1{\textcolor{asugold}{
+\vspace{-1.5em}
+\begin{center}
+\hrulefill\\
+\Large \textbf{#1}\\
+\vspace{-0.5em}
+\hrulefill
+\end{center}
+}}
+\def\newterm#1{\textcolor{asugold}{\textbf{#1}}}
+%For Progress Bar
+\usetikzlibrary{calc}
+\makeatletter
+\def\progressbar@progressbar{} % the progress bar
+\newcount\progressbar@tmpcounta% auxiliary counter
+\newcount\progressbar@tmpcountb% auxiliary counter
+\newdimen\progressbar@pbht %progressbar height
+\newdimen\progressbar@pbwd %progressbar width
+\newdimen\progressbar@rcircle % radius for the circle
+\newdimen\progressbar@tmpdim % auxiliary dimension
+\progressbar@pbwd=\linewidth
+\progressbar@pbht=1pt
+\progressbar@rcircle=2.5pt
+% the progress bar
+\def\progressbar@progressbar{%
+\progressbar@tmpcounta=\insertframenumber
+\progressbar@tmpcountb=\inserttotalframenumber
+\progressbar@tmpdim=\progressbar@pbwd
+\multiply\progressbar@tmpdim by \progressbar@tmpcounta
+\divide\progressbar@tmpdim by \progressbar@tmpcountb
+\begin{tikzpicture}
+\draw[asumaroon!10,line width=\progressbar@pbht]
+(0pt, 0pt) -- ++ (\progressbar@pbwd,0pt);
+\filldraw[asumaroon] %
+(\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax, .5\progressbar@pbht) circle (\progressbar@rcircle);
+\node[draw=asumaroon,text width=3.5em,align=center,inner sep=1pt,
+text=asumaroon,anchor=east] at (0,0) {\insertframenumber/\inserttotalframenumber};
+\end{tikzpicture}%
+}
+\addtobeamertemplate{footline}{}
+{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=4ex,center,dp=1ex]{violetHG}%
+    \progressbar@progressbar%
+  \end{beamercolorbox}%
+}
+\makeatother
+%End of Progress Bar
+\usebackgroundtemplate{
+  \tikz[overlay,remember picture]
+  \node[opacity=1, at=(current page.south east),anchor=south east,inner sep=0.50em] {
+    \includegraphics[height=0.75cm,width=1.75cm]{asu-wpc-logo.JPG}};
+}
+%End of Watermark
+
+\makeindex
+
+\begin{document}
+
+\setbeamercovered{transparent}
+
+\begin{frame}
+
+\title{\LARGE{Main Title}}
+\subtitle{\Large{Subtitle}}
+\author[HG, x, y]{Harish Guda\inst{1} \and Author x\inst{2}}
+\institute
+{
+\inst{1}
+Department of Supply Chain Management \\
+W.P. Carey School of Business \\
+Arizona State University
+\and
+\inst{2}
+Department of Operations Management \\
+Jindal School of Management \\
+The University of Texas at Dallas
+}
+\date[lecture]{Seminar on Pricing and Revenue Management, \\
+\today}
+
+\maketitle
+\end{frame}
+
+%The Summary Slide
+
+\begin{frame}
+
+\frametitle{A Brief Summary}
+
+\begin{itemize}[<+->]
+\setlength\itemsep{2em}
+\item Summary points
+
+\item One key term: \newterm{bid-price control}.
+
+\item Some approximations.
+
+\end{itemize}
+\end{frame}
+
+\AtBeginSection[]
+{
+ \begin{frame}
+ \frametitle{Agenda}
+ \tableofcontents[currentsection]
+ \addtocounter{framenumber}{-1}
+ \end{frame}
+}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{Introduction}
+\begin{itemize}[<+->]\setlength\itemsep{2em}
+
+\item \newterm{Key term}: Definition.
+
+\item Customers buy bundles of resources in combination.
+\begin{itemize}
+\setlength\itemsep{1em}
+\item Example 1.
+\end{itemize}
+\end{itemize}\pause
+\bigquestion{Main Research Question: What is the role of $\delta$ on $\gamma$?}
+\end{frame}
+
+\section{Model}
+
+\begin{frame}
+\frametitle{Model}
+\begin{itemize}[<+->]\setlength\itemsep{2em}
+\item Key parameters of agent $W$: $\theta$, $\gamma$
+
+\item Key parameters of agent $C$: $\delta$, $\omega$.
+
+\end{itemize}
+\end{frame}
+
+\section{Results}
+
+\begin{frame}
+\frametitle{Key Non-Existence Result}
+\begin{itemize}[<+->]\setlength\itemsep{2em}
+\item Here is a result. 
+\end{itemize}
+
+\bigskip
+
+\begin{theorem}
+Suppose $\gamma > 0$. There does not exist an outcome with $\delta > 0$ and $\Delta > 0$. That is,
+\begin{equation}
+\gamma > 0 \implies \delta \cdot \Delta < 0.
+\end{equation}
+\end{theorem}
+
+
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\Huge \textcolor{asumaroon}{Thank You.}
+\end{center}
+
+\end{frame}
+
+\end{document}
