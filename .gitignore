@@ -2,8 +2,14 @@
 *.log
 *.aux
 *.bbl
+*.ilg
+*.ind
+*.nav
+*.out
+*.snm
 *.blg
 *.out
 *.synctex
 *.synctex.gz
+*.toc
 # Ignore 
