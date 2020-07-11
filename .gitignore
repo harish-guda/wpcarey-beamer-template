@@ -4,6 +4,7 @@
 *.bbl
 *.ilg
 *.ind
+*.idx
 *.nav
 *.out
 *.snm
