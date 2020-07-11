@@ -17,10 +17,12 @@
 \usepackage{verbatim}
 \usepackage{multicol}
 \beamertemplatenavigationsymbolsempty
+
 \definecolor{asumaroon}{RGB}{128, 0, 0}
 \definecolor{asugold}{RGB}{164,114,11}
 \definecolor{olive}{RGB}{85,107,47}
 \usecolortheme[named=asumaroon]{structure}
+\def\newterm#1{\textcolor{asugold}{\textbf{#1}}}
 \def\callout#1{\textcolor{asugold}{#1}}
 \def\bigquestion#1{\textcolor{asugold}{
 \vspace{-1.5em}
@@ -31,7 +33,7 @@
 \hrulefill
 \end{center}
 }}
-\def\newterm#1{\textcolor{asugold}{\textbf{#1}}}
+
 %For Progress Bar
 \usetikzlibrary{calc}
 \makeatletter
@@ -165,7 +167,7 @@ The University of Texas at Dallas
 \begin{frame}
 \frametitle{Key Non-Existence Result}
 \begin{itemize}[<+->]\setlength\itemsep{2em}
-\item Here is a result. 
+\item Here is a result.
 \end{itemize}
 
 \bigskip
