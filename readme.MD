@@ -11,6 +11,6 @@ This Beamer template uses the default Beamer theme with the following minor modi
 
 ## Other Features
 I use two specific commands for calling content out: 
-- callout: to callout/caution a particular idea. 
-- newterm: to highlight a term being introduced. 
-- bigquestion: make the important questions being posed prominent. 
+- `callout`: to callout/caution a particular idea. 
+- `newterm`: to highlight a term being introduced. 
+- `bigquestion`: make the important questions being posed prominent. 
