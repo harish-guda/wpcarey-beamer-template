@@ -10,7 +10,7 @@ This Beamer template uses the default Beamer theme with the following minor modi
 - A scrolling bar to denote the progress at the bottom of the slide. 
 
 ## Other Features
-I use two specific commands for calling content out (see `wpc-beamer-style`): 
+I use three specific commands for calling content out (see `wpc-beamer-style`): 
 - `callout`: to callout/caution a particular idea. 
 - `newterm`: to highlight a term being introduced. 
 - `bigquestion`: make the important questions being posed prominent. 
