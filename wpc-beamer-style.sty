@@ -1,7 +1,8 @@
 \usepackage{eulervm, multirow, amssymb, amsxtra, graphicx, epsfig, natbib, url, xcolor, amsmath, comment, hyperref, tikz, verbatim, multicol, calc}
 
 \beamertemplatenavigationsymbolsempty
-\usecolortheme{beaver}
+\usetheme{default}
+\useoutertheme{miniframes}
 \definecolor{asumaroon}{RGB}{128, 0, 0}
 \definecolor{asugold}{RGB}{164,114,11}
 \definecolor{olive}{RGB}{85,107,47}
@@ -44,7 +45,7 @@
 (0pt, 0pt) -- ++ (\progressbar@pbwd,0pt);
 \filldraw[asumaroon] %
 (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax, .5\progressbar@pbht) circle (\progressbar@rcircle);
-\node[draw=asumaroon,text width=3.5em,align=center,inner sep=1pt,
+\node[draw=asumaroon,text width=2.75em,align=center,inner sep=1pt,
 text=asumaroon,anchor=east] at (0,0) {\insertframenumber/\inserttotalframenumber};
 \end{tikzpicture}%
 }
