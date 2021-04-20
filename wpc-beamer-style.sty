@@ -1,14 +1,17 @@
-\usepackage{eulervm, multirow, amssymb, amsxtra, graphicx, epsfig, natbib, url, xcolor, amsmath, comment, hyperref, tikz, verbatim, multicol, calc}
+\usepackage{eulervm, multirow, amssymb, amsxtra, graphicx, epsfig, natbib, url, xcolor, amsmath, comment, hyperref, tikz, verbatim, multicol, calc, framed}
+\usepackage[default]{lato}
 
 \beamertemplatenavigationsymbolsempty
 \usetheme{default}
 \useoutertheme{miniframes}
 \definecolor{asumaroon}{RGB}{128, 0, 0}
 \definecolor{asugold}{RGB}{164,114,11}
+\definecolor{elegantpink}{RGB}{246, 132, 132}
 \definecolor{olive}{RGB}{85,107,47}
-\usecolortheme[named=asumaroon]{structure}
-\setbeamercolor{title}{fg=asumaroon}
-\setbeamercolor{frametitle}{fg=asumaroon}
+
+
+
+%%%%Define environments: newterm, callout, bigquestion
 \def\newterm#1{\textcolor{asumaroon}{\textbf{#1}}}
 \def\callout#1{\textcolor{asumaroon}{#1}}
 \def\bigquestion#1{\textcolor{asumaroon}{
@@ -20,8 +23,7 @@
 \hrulefill
 \end{center}
 }}
-
-%For Progress Bar
+%%%%% Begin: Progress Bar
 \makeatletter
 \def\progressbar@progressbar{} % the progress bar
 \newcount\progressbar@tmpcounta% auxiliary counter
@@ -56,12 +58,38 @@ text=asumaroon,anchor=east] at (0,0) {\insertframenumber/\inserttotalframenumber
   \end{beamercolorbox}%
 }
 \makeatother
-%End of Progress Bar
+%%%%%% End: Progress Bar
+
+
+%%%%% Begin: WPC Logo Watermark %%%%%%
 \usebackgroundtemplate{
   \tikz[overlay,remember picture]
   \node[opacity=1, at=(current page.south east),anchor=south east,inner sep=0.50em] {
     \includegraphics[height=0.75cm,width=1.75cm]{asu-wpc-logo.JPG}};
 }
-%End of Watermark
+%%%%% End: WPC Logo Watermark %%%%%%
 
+
+
+
+
+%%%% Begin: Transition Frame %%%%%
+\newenvironment{transitionframe}{
+  \begin{frame}}{
+    \end{frame}
+}
+%%%%%%% End: Transition Frame %%%%%%
+
+
+
+\usecolortheme[named=asumaroon]{structure}
+\setbeamercolor{title}{fg=asumaroon}
+\setbeamercolor{frametitle}{fg=asumaroon}
 \makeindex
+
+\setbeamercolor{frametitle}{fg=asumaroon}
+\setbeamercolor{title}{fg=asumaroon}
+\setbeamercolor{itemize item}{fg=asumaroon}
+\setbeamercolor{itemize subitem}{fg=asumaroon}
+\setbeamercolor{enumerate item}{fg=asumaroon}
+\setbeamercolor{enumerate subitem}{fg=asumaroon}
