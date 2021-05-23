@@ -64,12 +64,25 @@ University.
 \begin{frame}
 \frametitle{Model}
 \begin{itemize}[<+->]\setlength\itemsep{2em}
-\item Key parameters of agent $W$: $\theta$, $\gamma$
+\item Nature chooses $\omega \sim p(\cdot)$. 
 
-\item Key parameters of agent $C$: $\delta$, $\omega$.
+\vspace{2em}
 
+\pause 
+
+For any $\omega$:
+
+\pause
+
+\item Key parameter of agent $K$: $\kappa \sim  f_\omega(\cdot)$. 
+
+\item Key parameter of agent $D$: $\delta \sim g_\omega(\cdot)$.
 \end{itemize}
 
+\pause
+\begin{equation*}
+\text{\callout{Market Clears at all $\omega$:} } \quad \mathbf{K} f_\omega(\kappa) = \mathbf{D} g_\omega(\delta). 
+\end{equation*}
 
 \end{frame}
 
