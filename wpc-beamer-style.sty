@@ -1,41 +1,16 @@
-%%%% Begin: Transition Frame %%%%%
-\newenvironment{transitionframe}{
-  \setbeamercolor{background canvas}{bg=asugold!30}
-  \begin{frame}}{
-    \end{frame}
-}
-\setbeamercolor{section in toc}{fg=asumaroon}
-\setbeamercolor{subsection in toc}{fg=asumaroon}
-\setbeamersize{text margin left=1em,text margin right=1em} 
-%%%%%%% End: Transition Frame %%%%%%
+\usepackage{eulervm, multirow, amssymb, amsxtra, graphicx, epsfig, natbib, url, xcolor, amsmath, comment, hyperref, tikz, verbatim, multicol, calc, framed,  amssymb, bigints, wasysym}
 
-
-\usepackage{eulervm, multirow, amssymb, amsxtra, graphicx, epsfig, natbib, url, xcolor, amsmath, comment, hyperref, tikz, verbatim, multicol, calc, framed}
-
-%\usepackage[default]{lato}
 \beamertemplatenavigationsymbolsempty
-\usetheme{madrid}
-\definecolor{asumaroon}{RGB}{107, 29, 64}
-\definecolor{asugold}{RGB}{210, 105, 30}
+\usetheme{default}
+\useoutertheme{miniframes}
+\definecolor{asumaroon}{RGB}{128, 0, 0}
+\definecolor{asugold}{RGB}{164,114,11}
+\definecolor{olive}{RGB}{85,107,47}
 \usecolortheme[named=asumaroon]{structure}
-\makeindex
-\setbeamercolor{frametitle}{fg = white, bg=asumaroon}
-\setbeamertemplate{background canvas}[default]
-\setbeamercolor{itemize item}{fg=asumaroon}
-\setbeamercolor{itemize subitem}{fg=asumaroon}
-\setbeamercolor{enumerate item}{fg=asumaroon}
-\setbeamercolor{enumerate subitem}{fg=asumaroon}
-\setbeamertemplate{blocks}[default]
-\setbeamercolor{block title}{bg=asumaroon!90,fg=white}
-\setbeamercolor{block body}{bg = asumaroon!10}
-\setbeamertemplate{itemize items}[default]
-\setbeamertemplate{enumerate items}[default]
-\setbeamertemplate{footline}{}
-\setbeamercovered{invisible}
-
-%%%%Define environments: newterm, callout, bigquestion
-\def\newterm#1{\textcolor{asugold}{\textbf{#1}}}
-\def\callout#1{\textcolor{asugold}{#1}}
+\setbeamercolor{title}{fg=asumaroon}
+\setbeamercolor{frametitle}{fg=asumaroon}
+\def\newterm#1{\textcolor{asumaroon}{\textbf{#1}}}
+\def\callout#1{\textcolor{asumaroon}{#1}}
 \def\bigquestion#1{\textcolor{asumaroon}{
 \vspace{-1.5em}
 \begin{center}
@@ -45,16 +20,10 @@
 \hrulefill
 \end{center}
 }}
+\renewcommand*{\bibfont}{\tiny}
 
-%%%%% Begin: WPC Logo Watermark %%%%%%
-\usebackgroundtemplate{
-  \tikz[overlay,remember picture]
-  \node[opacity=1, at=(current page.south east),anchor=south east,inner sep=0.50em] {
-    \includegraphics[height=0.75cm,width=1.75cm]{asu-wpc-logo.JPG}};
-}
-%%%%% End: WPC Logo Watermark %%%%%%
 
-%%%%% Begin: Progress Bar
+%For Progress Bar
 \makeatletter
 \def\progressbar@progressbar{} % the progress bar
 \newcount\progressbar@tmpcounta% auxiliary counter
@@ -84,9 +53,28 @@ text=asumaroon,anchor=east] at (0,0) {\insertframenumber/\inserttotalframenumber
 }
 \addtobeamertemplate{footline}{}
 {%
-  \begin{beamercolorbox}[wd=\paperwidth,ht=4ex,center,dp=1ex]{asumaroon}%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=4ex,center,dp=1ex]{violetHG}%
     \progressbar@progressbar%
   \end{beamercolorbox}%
 }
 \makeatother
-%%%%%% End: Progress Bar
+%End of Progress Bar
+\usebackgroundtemplate{
+  \tikz[overlay,remember picture]
+  \node[opacity=1, at=(current page.south east),anchor=south east,inner sep=0.50em] {
+    \includegraphics[height=0.5cm,width=1.25cm]{asu-wpc-logo.JPG}};
+}
+%End of Watermark
+
+\makeindex
+
+%%%% Begin: Transition Frame %%%%%
+\newenvironment{transitionframe}{
+  \setbeamercolor{background canvas}{bg=asugold!30}
+  \begin{frame}}{
+    \end{frame}
+}
+\setbeamercolor{section in toc}{fg=asumaroon}
+\setbeamercolor{subsection in toc}{fg=asumaroon}
+\setbeamersize{text margin left=1em,text margin right=1em} 
+%%%%%%% End: Transition Frame %%%%%%
