@@ -2,13 +2,17 @@
 
 \beamertemplatenavigationsymbolsempty
 \usetheme{default}
-\useoutertheme{miniframes}
+%\useoutertheme{miniframes}
 \definecolor{asumaroon}{RGB}{128, 0, 0}
 \definecolor{asugold}{RGB}{164,114,11}
 \definecolor{olive}{RGB}{85,107,47}
 \usecolortheme[named=asumaroon]{structure}
 \setbeamercolor{title}{fg=asumaroon}
 \setbeamercolor{frametitle}{fg=asumaroon}
+
+
+
+
 
 
 \def\newterm#1{\textcolor{asumaroon}{\textbf{#1}}}
@@ -70,13 +74,33 @@ text=asumaroon,anchor=east] at (0,0) {\insertframenumber/\inserttotalframenumber
 
 \makeindex
 
-%%%% Begin: Transition Frame %%%%%
-\newenvironment{transitionframe}{
-  \setbeamercolor{background canvas}{bg=asugold!30}
-  \begin{frame}}{
-    \end{frame}
+%%%% Section Titles as Transitions
+
+
+%\AtBeginSection[]
+%{
+% \begin{frame}
+% \frametitle{Agenda}
+% \tableofcontents[currentsection]
+% \addtocounter{framenumber}{-1}
+% \end{frame}
+%}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \addtocounter{framenumber}{-1}
+  \end{frame}
 }
+
+
+
+
 \setbeamercolor{section in toc}{fg=asumaroon}
 \setbeamercolor{subsection in toc}{fg=asumaroon}
-\setbeamersize{text margin left=1em,text margin right=1em} 
-%%%%%%% End: Transition Frame %%%%%%
+\setbeamersize{text margin left=2em,text margin right=2em} 
