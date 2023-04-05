@@ -4,9 +4,17 @@
 \usetheme{default}
 \useoutertheme[footline=empty,subsection=false]{miniframes}
 \useinnertheme{circles}
+
+%%%%% A few colors %%%%%
 \definecolor{asumaroon}{RGB}{128, 0, 0}
 \definecolor{asugold}{RGB}{164,114,11}
-\definecolor{olive}{RGB}{85,107,47}
+\definecolor{asucrimson}{RGB}{220,20,60}
+\definecolor{asubrown}{RGB}{165,42,42}
+\definecolor{asufirebrick}{RGB}{195,34,34}
+\definecolor{asupurple}{RGB}{123,0,68}
+
+
+%%%%%% Setting up global themes %%%%%
 \usecolortheme[named=asumaroon]{structure}
 \setbeamercolor{title}{fg=asumaroon}
 \setbeamercolor{frametitle}{fg=asumaroon}
@@ -98,3 +106,17 @@ text=asumaroon,anchor=east] at (0,0) {\insertframenumber/\inserttotalframenumber
 \setbeamercolor{section in toc}{fg=asumaroon}
 \setbeamercolor{subsection in toc}{fg=asumaroon}
 \setbeamersize{text margin left=2em,text margin right=2em} 
+
+
+
+\setbeamercolor{block title}{fg=white, bg=asumaroon}
+% 2- Block body (background)
+\setbeamercolor{block body}{bg=asumaroon!5}
+
+\setbeamercolor{block title alerted}{fg=white, bg=asufirebrick}
+% 2- Block body (background)
+\setbeamercolor{block body alerted}{bg=asufirebrick!5}
+
+\setbeamercolor{block title example}{fg=white, bg=asupurple}
+% 2- Block body (background)
+\setbeamercolor{block body example}{bg=asupurple!5}
