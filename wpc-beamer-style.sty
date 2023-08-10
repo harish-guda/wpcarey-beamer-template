@@ -2,7 +2,7 @@
 
 \beamertemplatenavigationsymbolsempty
 \usetheme{default}
-\useoutertheme[footline=empty,subsection=false]{miniframes}
+%\useoutertheme[footline=empty,subsection=false]{miniframes}
 \useinnertheme{circles}
 
 %%%%% A few colors %%%%%
@@ -10,7 +10,7 @@
 \definecolor{asugold}{RGB}{164,114,11}
 \definecolor{asucrimson}{RGB}{220,20,60}
 \definecolor{asubrown}{RGB}{165,42,42}
-\definecolor{asufirebrick}{RGB}{195,34,34}
+\definecolor{asufirebrick}{RGB}{178,34,34}
 \definecolor{asupurple}{RGB}{123,0,68}
 
 
@@ -54,7 +54,7 @@
 \multiply\progressbar@tmpdim by \progressbar@tmpcounta
 \divide\progressbar@tmpdim by \progressbar@tmpcountb
 \begin{tikzpicture}
-\draw[asumaroon!10,line width=\progressbar@pbht]
+\draw[asumaroon!20,line width=\progressbar@pbht]
 (0pt, 0pt) -- ++ (\progressbar@pbwd,0pt);
 \filldraw[asumaroon] %
 (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax, .5\progressbar@pbht) circle (\progressbar@rcircle);
@@ -64,7 +64,7 @@ text=asumaroon,anchor=east] at (0,0) {\insertframenumber/\inserttotalframenumber
 }
 \addtobeamertemplate{footline}{}
 {%
-  \begin{beamercolorbox}[wd=\paperwidth,ht=4ex,center,dp=1ex]{violetHG}%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=4ex,center,dp=1ex]{asumaroon}%
     \progressbar@progressbar%
   \end{beamercolorbox}%
 }
@@ -72,8 +72,8 @@ text=asumaroon,anchor=east] at (0,0) {\insertframenumber/\inserttotalframenumber
 %End of Progress Bar
 \usebackgroundtemplate{
   \tikz[overlay,remember picture]
-  \node[opacity=1, at=(current page.south east),anchor=south east,inner sep=0.50em] {
-    \includegraphics[height=0.85cm,width=2.25cm]{asu-wpc-logo.JPG}};
+  \node[opacity=1, at=(current page.south east),anchor=south east,inner sep=0.7em] {
+    \includegraphics[height=0.9cm,width=2.25cm]{asu-wpc-logo.JPG}};
 }
 %End of Watermark
 
@@ -93,6 +93,7 @@ text=asumaroon,anchor=east] at (0,0) {\insertframenumber/\inserttotalframenumber
 
 \AtBeginSection[]{
   \begin{frame}
+  \vspace{2.5em}
   \vfill
   \centering
   \begin{beamercolorbox}[sep=8pt,center]{title}
@@ -113,10 +114,10 @@ text=asumaroon,anchor=east] at (0,0) {\insertframenumber/\inserttotalframenumber
 % 2- Block body (background)
 \setbeamercolor{block body}{bg=asumaroon!5}
 
-\setbeamercolor{block title alerted}{fg=white, bg=asufirebrick}
+\setbeamercolor{block title alerted}{fg=white, bg=asucrimson}
 % 2- Block body (background)
-\setbeamercolor{block body alerted}{bg=asufirebrick!5}
+\setbeamercolor{block body alerted}{bg=asucrimson!5}
 
-\setbeamercolor{block title example}{fg=white, bg=asupurple}
+\setbeamercolor{block title example}{fg=white, bg=asufirebrick}
 % 2- Block body (background)
-\setbeamercolor{block body example}{bg=asupurple!5}
+\setbeamercolor{block body example}{bg=asufirebrick!5}
