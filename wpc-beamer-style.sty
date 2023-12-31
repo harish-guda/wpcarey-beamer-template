@@ -1,23 +1,24 @@
-\usepackage{eulervm, multirow, amssymb, amsxtra, graphicx, epsfig, natbib, url, xcolor, amsmath, comment, hyperref, tikz, verbatim, multicol, calc, framed,  amssymb, bigints, wasysym}
+\usepackage{eulervm, multirow, amssymb, amsxtra, graphicx, epsfig, natbib, url, xcolor, amsmath, comment, hyperref, tikz, verbatim, multicol, calc, framed,  amssymb, bigints, wasysym, soul}
 
 \beamertemplatenavigationsymbolsempty
 \usetheme{default}
 %\useoutertheme[footline=empty,subsection=false]{miniframes}
-\useinnertheme{circles}
+%\useinnertheme{circles}
 
 %%%%% A few colors %%%%%
-\definecolor{asumaroon}{RGB}{128, 0, 0}
-\definecolor{asugold}{RGB}{164,114,11}
+\definecolor{asumaroon}{RGB}{128,0,0}
+\definecolor{asugold}{RGB}{255,223,0}
 \definecolor{asucrimson}{RGB}{220,20,60}
 \definecolor{asubrown}{RGB}{165,42,42}
 \definecolor{asufirebrick}{RGB}{178,34,34}
+\definecolor{asudarkred}{RGB}{101,0,11}
 \definecolor{asupurple}{RGB}{123,0,68}
 
 
 %%%%%% Setting up global themes %%%%%
 \usecolortheme[named=asumaroon]{structure}
-\setbeamercolor{title}{fg=asumaroon}
-\setbeamercolor{frametitle}{fg=asumaroon}
+\setbeamercolor{title}{fg=asumaroon, bg = white}
+\setbeamercolor{frametitle}{fg=asumaroon, bg = white}
 
 
 \def\newterm#1{\textcolor{asumaroon}{\textbf{#1}}}
@@ -73,7 +74,7 @@ text=asumaroon,anchor=east] at (0,0) {\insertframenumber/\inserttotalframenumber
 \usebackgroundtemplate{
   \tikz[overlay,remember picture]
   \node[opacity=1, at=(current page.south east),anchor=south east,inner sep=0.7em] {
-    \includegraphics[height=0.9cm,width=2.25cm]{asu-wpc-logo.JPG}};
+    \includegraphics[height=0.6cm,width=1.5cm]{asu-wpc-logo.JPG}};
 }
 %End of Watermark
 
@@ -93,31 +94,32 @@ text=asumaroon,anchor=east] at (0,0) {\insertframenumber/\inserttotalframenumber
 
 \AtBeginSection[]{
   \begin{frame}
-  \vspace{2.5em}
   \vfill
   \centering
   \begin{beamercolorbox}[sep=8pt,center]{title}
-  \usebeamerfont{title}\insertsectionhead\par%
+  \usebeamerfont{title}\insertsectionhead\par
   \end{beamercolorbox}
   \vfill
   \addtocounter{framenumber}{-1}
   \end{frame}
 }
 
+
+
 \setbeamercolor{section in toc}{fg=asumaroon}
 \setbeamercolor{subsection in toc}{fg=asumaroon}
-\setbeamersize{text margin left=2em,text margin right=2em} 
-
-
-
-\setbeamercolor{block title}{fg=white, bg=asumaroon}
-% 2- Block body (background)
+\setbeamersize{text margin left=2em,text margin right=2em}
+\setbeamercolor{block title}{fg=white, bg= asumaroon}
 \setbeamercolor{block body}{bg=asumaroon!5}
+\setbeamercolor{block title example}{fg=white, bg=asudarkred}
+\setbeamercolor{block body example}{bg=asudarkred!5}
+\setbeamercolor{block title alerted}{fg=white, bg=asufirebrick}
+\setbeamercolor{block body alerted}{bg=asufirebrick!5}
 
-\setbeamercolor{block title alerted}{fg=white, bg=asucrimson}
-% 2- Block body (background)
-\setbeamercolor{block body alerted}{bg=asucrimson!5}
-
-\setbeamercolor{block title example}{fg=white, bg=asufirebrick}
-% 2- Block body (background)
-\setbeamercolor{block body example}{bg=asufirebrick!5}
+\makeatletter
+\let\HL\hl
+\renewcommand\hl{%
+  \let\set@color\beamerorig@set@color
+  \let\reset@color\beamerorig@reset@color
+  \HL}
+\makeatother

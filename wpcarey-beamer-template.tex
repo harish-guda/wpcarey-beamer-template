@@ -28,9 +28,41 @@ University.
 
 \frametitle{A Brief Summary}
 
-A \callout{new idea}. \pause \vspace{2em}
+Here's a \callout{new idea}. \pause \vspace{2em}
 
-We show \callout{surprising} result.
+We show \callout{surprising result}.
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Why This is Important}
+
+\begin{center}
+\callout{New Idea} + Bunch of Old Ideas \\ \vspace{1em}
+$\Downarrow$ \\ \vspace{1em} \pause
+\callout{New Findings}
+\end{center}
+\pause
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{block}{\centering Our Paper}
+\begin{enumerate}
+\item<4-> Finding 1 \vspace{1em}
+\item<5-> Finding 2 \vspace{1em}
+\end{enumerate}
+\end{block}
+\end{column}
+
+\begin{column}{0.45\textwidth}
+\begin{block}{\centering Extant Work}
+\begin{enumerate}
+\item<4-> Contradicts Paper 1 \vspace{1em}
+\item<5-> Adds to Paper 2 and Paper 3 \vspace{1em}
+\end{enumerate}
+\end{block}
+\end{column}
+\end{columns}
 
 \end{frame}
 
@@ -51,57 +83,126 @@ Example: Airline itinerary.
 \section{Model}
 
 \begin{frame}
-\frametitle{Model}
+\frametitle{Model Overview}
+\begin{columns}
 
-Nature chooses $\omega \sim p(\cdot)$.\pause\vspace{2em}
-
-For any $\omega$:\pause\vspace{2em}
-
-\begin{itemize}
-\item Key parameter of agent $K$: $\kappa \sim  f_\omega(\cdot)$. \pause\vspace{2em}
-
-\item Key parameter of agent $D$: $\delta \sim g_\omega(\cdot)$. \pause\vspace{2em}
-
-\begin{equation*}
-\text{\callout{Market Clears at all $\omega$:} } \quad \mathbf{K} f_\omega(\kappa) = \mathbf{D} g_\omega(\delta).
-\end{equation*}
+\begin{column}{0.5\textwidth}
+\begin{itemize}\setlength\itemsep{3em}
+\item<1-> Fix $\omega \in \Omega$. 
+\item<2-> Key parameter of agent $K$: $\kappa \sim  f(\cdot \vert \omega)$. 
+\item<3-> Key parameter of agent $D$: $\delta \sim g(\cdot \vert \omega)$. 
+\item<4-> Market Clears at all $\omega$. 
 \end{itemize}
+\end{column}
+
+\pause
+\begin{column}{0.4\textwidth}
+\begin{center}
+\begin{block}{Agent K's Problem}
+\begin{equation*}
+\max_{a_t\in \{0, 1\}} \kappa^t a_t
+\end{equation*}
+\end{block} 
+
+\pause\vspace{2em}
+
+\begin{block}{Agent D's Problem}
+\begin{equation*}
+\min_{b_t\in \{0, 1\}}\sum_{t = 1}^\infty \delta^t b_t. 
+\end{equation*}
+\end{block}
+\end{center}
+
+\end{column}
+
+\end{columns}
+
+\end{frame}
 
 
+\begin{frame}
+\frametitle{Assumptions on Environment}
+
+\begin{columns}
+
+\begin{column}{0.4\textwidth}
+\begin{block}{Assumptions}
+\begin{enumerate}
+\item<1-> Assumption One. \vspace{2em}
+\item<2-> Assumption Two. \vspace{2em}
+\item<3-> Assumption Three. \vspace{2em}
+\end{enumerate}
+\end{block}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{block}{Interpretation/Implications}
+\begin{enumerate}
+\item<1-> Practice 1. \vspace{2em}
+\item<2-> Practice 2. \vspace{2em}
+\item<3-> Practice 3. \vspace{2em}
+\end{enumerate}
+\end{block}
+\end{column}
+\end{columns}
 \end{frame}
 
 \section{Results}
 
 \begin{frame}
-\frametitle{A Result}
+\frametitle{Results}
 \pause
 \begin{block}{Key Non-Existence Result}
-Suppose $\gamma > 0$. There does not exist an outcome where $\delta > 0$ and $\Delta > 0$. That is,
+Suppose $\gamma > 0$. There does not exist an outcome where $\delta$ and $\Delta$ are both positive or both negative. That is,
 \begin{equation*}
-\gamma > 0 \implies \delta \cdot \Delta < 0.
+\gamma > 0 \implies \delta \times \Delta < 0.
 \end{equation*}
 \end{block}
 
 \pause
 
-\begin{alertblock}{Possible Misinterpretation (Alert)}
-This is not to be misunderstood with $\delta < 0 \implies \Delta > 0$.
+\begin{alertblock}{Possible Misinterpretation}
+This is not to be misunderstood with $\gamma < 0 \implies \delta \times \Delta > 0$.
 \end{alertblock}
 
 \pause
 
 \begin{exampleblock}{An Example}
-Consider the example $a=b$.
+Consider the example \callout{ex1}.
 \end{exampleblock}
 \end{frame}
 
-\section[Implications]{Managerial Implications}
-
 \begin{frame}
-\vspace{2.5em}
+\frametitle{Results}
+Results blocks use the standard block template that I \hl{highlight} below.
+\pause
+\begin{theorem}[Key Non-Existence Result]
+Suppose $\gamma > 0$. There does not exist an outcome where $\delta$ and $\Delta$ are both positive or both negative. That is,
+\begin{equation*}
+\gamma > 0 \implies \delta \times \Delta < 0.
+\end{equation*}
+\end{theorem}
+
+\pause
+
+\begin{lemma}[Possible Misinterpretation]
+This is not to be misunderstood with $\gamma < 0 \implies \delta \times \Delta > 0$.
+\end{lemma}
+
+\pause
+
+\begin{corollary}[An Example]
+Consider the example \callout{ex1}.
+\end{corollary}
+\end{frame}
+
+
+\section{Implications}
+
+\begin{frame}[c]
 \begin{center}
 \textcolor{asumaroon}{\Large{Thank You!}}\\
-\vspace{1.5em}
+\vspace{1em}
 Paper available at \texttt{\callout{\href{https://harishguda.me/research}{harishguda.me/research}}}.
 \end{center}
 
